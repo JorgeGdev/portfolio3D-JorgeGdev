@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun and simple portfolio with R3F</title>
+    <title>JorgeGDev 3D portfolio</title>
+    <style>
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(32, 15, 110);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            font-size: 40px;
+            color: white;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>  AMAZING MODEL THANKS TO Berk Gedik / https://sketchfab.com/.</h1>
+    <div id="loader">The Experience is Loading...</div>
+    <h1>AMAZING MODEL THANKS TO Berk Gedik / https://sketchfab.com/.</h1>
     <div id="root"></div>
-    <script type="module" src="./index.jsx"></script></body>
+    <script type="module" src="./index.jsx"></script>
+    <script>
+        // JavaScript para manejar el loader
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById("loader").style.display = "none";
+            }, 5000); 
+        });
+    </script>
+</body>
 </html>
